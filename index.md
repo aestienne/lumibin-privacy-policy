@@ -1,6 +1,6 @@
 # LumiBin for Android TV: privacy policy
 
-Last updated: 25 October 2026
+Last updated: 26 October 2026
 
 LumiBin for Android TV ("the app", package `com.aestienne.lumibin`) is a player and organiser for your own video files: you choose the folders that hold them (or bring in a library built with the LumiBin app for Windows).
 
@@ -16,7 +16,7 @@ In Settings > Online information you can let the app look up posters, descriptio
 
 What is sent: the **title and release year read from the names of your video files** (for example "The Matrix 1999"), and, for TMDB and OMDb, **the API key that you typed or loaded yourself**. Like any web request, the services also see the television's IP address. **No file, no file name beyond that title, no folder path, no watch history, no device identifier and no account** is sent, and the developer of the app runs no server and receives nothing. What comes back (posters, texts, ratings) is stored on the television. Each service handles requests under its own privacy policy. You can switch the feature off again at any time, or switch off each service on its own.
 
-The keys are kept in the app's private storage. A keys file that you choose in Android's file picker is read once and not kept.
+The keys are kept in the app's private storage. A keys file is read once and not kept: you choose it in Android's file picker, or the app looks for a file named `lumibin-keys` in the folders and drives of the television, only when you ask it to, and only reads that file. The keys are sent to TMDB and OMDb only to check that they work and to look titles up.
 
 ## Optional: network shares
 
@@ -39,7 +39,7 @@ There are three ways, and you choose which ones you use:
 - **The television's drives**, on Android 12 and earlier: when you want to add a folder of the television's memory, of a USB drive or of a network share that the television connected by itself, the app asks once for Android's "photos and media" permission (`READ_EXTERNAL_STORAGE`). The app then reads the videos and subtitles of the folders you add, by their paths. On Android 11 and 12, Android shows the app only media files (videos, pictures, sound, subtitles), not your other files; on Android 10 the permission covers the files of the storage. You can withdraw it at any time in Android's settings (Settings > Apps > LumiBin > Permissions). The app never asks for "All files access".
 - **Android's own file and folder pickers** (the Storage Access Framework), for the folders you choose there and for the library file or keys file, if you use them. Android gives the app access to exactly those folders and files.
 
-Whichever way, the app reads the names, sizes and dates of the files in the folders you added to build your library, and the video files you play (and a few of their blocks to recognise a renamed file); the library and keys files you chose are read once. Nothing read is sent anywhere. It never changes or deletes your files.
+Whichever way, the app reads the names, sizes and dates of the files in the folders you added to build your library, and the video files you play (and a few of their blocks to recognise a renamed file); the library and keys files you chose are read once. Nothing read is sent anywhere. The app never changes your files and deletes one only when you ask: in "Compare files" (the menu of a held OK on a title that has several files), the bin button next to a file deletes that file for good, after a confirmation, and only where the folder lets the app delete (never on folders chosen in Android's picker). Nothing is deleted otherwise.
 
 ## Deleting your data
 
@@ -55,4 +55,4 @@ If this policy changes, the new version will be published at the same address wi
 
 ## Contact
 
-Questions about this policy: (contact address to come)
+Questions about this policy: info.lumibin@gmail.com
